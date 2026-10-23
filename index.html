@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Раздатка №4 — Паспорт изделия и промпт для карточки товара</title>
+<style>
+:root{--ink:#1a2330;--muted:#5b6673;--line:#dfe4ea;--bg:#f7f8fa;--card:#fff;--accent:#1a4d8f;--accent2:#0f7b6c;--warn:#b8860b;--warnbg:#fff8e6;--free:#0f7b6c;--freebg:#e6f5f2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+header{background:linear-gradient(135deg,#0b3d6b,#1a4d8f);color:#fff;padding:32px 24px}
+header .wrap{max-width:1080px;margin:0 auto}
+header .badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600}
+header h1{font-size:29px;line-height:1.25;margin:14px 0 10px;font-weight:700}
+header p{font-size:16px;opacity:.92;max-width:800px}
+header .meta{font-size:14px;opacity:.8;margin-top:14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+main{padding:32px 0 56px}
+section{margin-bottom:44px}
+h2{font-size:22px;margin-bottom:8px;font-weight:700}
+h2 + .lead{color:var(--muted);font-size:15px;margin-bottom:18px}
+h3{font-size:17px;margin:24px 0 10px;font-weight:650}
+h4{font-size:15.5px;margin:0 0 6px;color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin-bottom:16px}
+.alert{border-left:4px solid var(--warn);background:var(--warnbg);border-radius:0 8px 8px 0}
+.alert strong{color:#8a6100}
+.good{border-left:4px solid var(--accent2);background:var(--freebg);border-radius:0 8px 8px 0}
+.good strong{color:#0b5f53}
+.free-badge{display:inline-block;background:var(--freebg);color:var(--free);font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:4px;border:1px solid #bfe3dc;white-space:nowrap}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:14.5px}
+th{background:#eef1f5;text-align:left;padding:12px 14px;font-weight:650;font-size:13px;color:#3d4753;border-bottom:2px solid var(--line)}
+td{padding:12px 14px;border-bottom:1px solid #eceff2;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr.pick{background:#f4faf8}
+.prompt{background:#f4f6f8;border:1px solid #e2e6eb;border-left:3px solid var(--accent);border-radius:0 7px 7px 0;padding:14px 16px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;color:#2b3442;margin:12px 0;white-space:pre-wrap;line-height:1.55}
+.prompt-lbl{font-size:13px;font-weight:650;color:var(--accent);margin:16px 0 4px}
+.template{background:#fbfcfd;border:2px dashed #c8d2de;border-radius:9px;padding:20px 22px;margin:14px 0;font-size:14.5px}
+.template .row{display:flex;gap:10px;padding:7px 0;border-bottom:1px dashed #e4e9ef}
+.template .row:last-of-type{border-bottom:none}
+.template .k{font-weight:650;min-width:210px;color:var(--accent)}
+.template .f{color:var(--muted);font-style:italic}
+.check li{list-style:none;position:relative;padding-left:28px;margin-bottom:9px}
+.check li:before{content:"□";position:absolute;left:0;top:-1px;font-size:17px;color:var(--accent2);font-weight:700}
+ul,ol{margin:10px 0 10px 22px}
+li{margin-bottom:7px}
+a{color:var(--accent)}
+.tblwrap{overflow-x:auto;border-radius:10px;border:1px solid var(--line);background:var(--card)}
+.tblwrap table{border:none}
+footer{background:#1f2732;color:#9aa5b1;padding:26px 24px;font-size:13.5px}
+footer .wrap{max-width:1080px;margin:0 auto}
+footer a{color:#8fb4e8}
+@media(max-width:640px){header h1{font-size:23px}main{padding:24px 0 40px}th,td{padding:10px 11px;font-size:13.5px}.template .row{flex-direction:column;gap:2px}.template .k{min-width:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="badge">Раздаточный материал №4</span>
+<h1>Паспорт изделия и промпт для карточки товара</h1>
+<p>Паспорт изделия — это техническое задание для фотографа. С ним ИИ работает не хуже: состав, фактура, цвет, сезонность. Без паспорта ИИ придумает свой товар — и это будет не ваш товар.</p>
+<div class="meta">Занятие 2 · 23 октября 2026</div>
+</div></header>
+
+<main class="wrap">
+
+<section>
+<div class="card good">
+<strong>Главное правило.</strong> Модель не знает, что вы продаёте. Она знает только текст промпта. Паспорт изделия — это способ передать ей то, что знаете вы. Чем полнее паспорт, тем меньше модель придумывает.
+</div>
+</section>
+
+<section>
+<h2>1. Шаблон паспорта изделия</h2>
+<p class="lead">Заполните по одному изделию. Поля можно копировать из карточки товара или из технической документации.</p>
+<div class="template">
+<div class="row"><span class="k">Название</span><span class="f">то, как вы называете изделие в каталоге</span></div>
+<div class="row"><span class="k">Артикул</span><span class="f">внутренний код производителя</span></div>
+<div class="row"><span class="k">Категория</span><span class="f">носки / футболка / брюки / платье</span></div>
+<div class="row"><span class="k">Состав</span><span class="f">хлопок 80%, полиэстер 18%, эластан 2%</span></div>
+<div class="row"><span class="k">Плотность</span><span class="f">160 г/м²</span></div>
+<div class="row"><span class="k">Цвет</span><span class="f">точный оттенок: тёмно-синий, терракотовый, молочный</span></div>
+<div class="row"><span class="k">Размерный ряд</span><span class="f">35–38 / 6 мес–2 года</span></div>
+<div class="row"><span class="k">Конструкция</span><span class="f">классические, 18 см, 2 пары в упаковке</span></div>
+<div class="row"><span class="k">Элементы</span><span class="f">вышивка на мыске, крашеная резинка в тон, анатомическая подошва</span></div>
+<div class="row"><span class="k">Фактура</span><span class="f">гладкая гладкая вязка / петля / рельефная</span></div>
+<div class="row"><span class="k">Сезонность</span><span class="f">демисезон / всесезон</span></div>
+<div class="row"><span class="k">Сценарий носки</span><span class="f">кому, когда, с чем сочетают</span></div>
+<div class="row"><span class="k">Упаковка</span><span class="f">картонная подвеска, полиэтиленовый пакет</span></div>
+<div class="row"><span class="k">Особенности</span><span class="f">чем это изделие отличается от аналогов</span></div>
+</div>
+</section>
+
+<section>
+<h2>2. Заполненный пример — носки</h2>
+<p class="lead">Так паспорт выглядит в работе. Этот пример можно использовать как образец на занятии.</p>
+<div class="tblwrap"><table>
+<thead><tr><th>Поле</th><th>Значение</th><th>Зачем это нужно модели</th></tr></thead>
+<tbody>
+<tr class="pick"><td class="mname">Название</td><td>Носки детские махровые с вышивкой</td><td>Определяет категорию товара в картинке</td></tr>
+<tr><td>Артикул</td><td>ТН-204</td><td>На фото не видно, но привязывает варианты к позиции</td></tr>
+<tr class="pick"><td>Состав</td><td>Хлопок 80%, полиэстер 18%, эластан 2%</td><td>Влияет на вид ткани: хлопок матовее, полиэстер даёт блеск</td></tr>
+<tr><td>Плотность</td><td>180 г/м², махровая внутренняя сторона</td><td>Модель нарисует разную фактуру — от неё зависит объём изделия</td></tr>
+<tr class="pick"><td>Цвет</td><td>Тёмно-синий, терракотовый, молочный</td><td>Точный оттенок. «Синий» модель сделает ярким, нужен именно тёмно-синий</td></tr>
+<tr><td>Конструкция</td><td>Классические, высота голенища 18 см, 2 пары</td><td>Задаёт пропорции: низкий или высокий борт, одна или две пары в кадре</td></tr>
+<tr class="pick"><td>Элементы</td><td>Вышивка на мыске, крашеная резинка в тон основной ткани</td><td>Самая узнаваемая деталь бренда — именно её чаще всего «съедает» генерация</td></tr>
+<tr><td>Сценарий</td><td>Детская повседневная носка, кроссовки и шорты, школа и прогулки</td><td>Задаёт контекст: кто носит и когда</td></tr>
+<tr><td>Упаковка</td><td>Картонная подвеска с логотипом бренда</td><td>Нужна, если карточка требует фото в упаковке</td></tr>
+</tbody></table></div>
+<p class="prompt-lbl">Паспорт этого изделия превращается в промпт:</p>
+<div class="prompt">Спортивные детские носки, высота голенища 18 см, классический крой.
+Тёмно-синий цвет, махровая текстура 180 г/м², плотная вязка.
+Вышивка на мыске, резинка в тон основной ткани, одинаковая на всех носках.
+Точная фактура: волокнистая, матовая, без блеска.
+Сложены парой, под небольшим углом, лежат на плоскости.
+Свет: мягкий дневной, рассеянный, без жёстких теней и бликов.
+Фон: светло-серый, гладкий, без текстуры и посторонних предметов.
+Съёмка сверху, квадрат 1:1, изделие занимает 80% кадра.
+Реалистичная фотография товара для маркетплейса.</div>
+</section>
+
+<section>
+<h2>3. Как паспорт превращается в промпт</h2>
+<p class="lead">Формула из шести элементов. Порядок важен — от изделия к техническим условиям.</p>
+<ol class="steps" style="list-style:none;padding-left:0">
+<li><strong>1. Изделие</strong> — что это. Носски, футболка, платье. Без бренда и без превосходных степеней</li>
+<li><strong>2. Материал и фактура</strong> — хлопок, шерсть, махровая вязка, глянец, плотная рельефная. Это главный параметр внешнего вида</li>
+<li><strong>3. Цвет и конструкция</strong> — точный оттенок, высота голенища, крой, число пар в кадре</li>
+<li><strong>4. Сценарий</strong> — как изделие уложено: сложено, на ноге, разложено, в руке</li>
+<li><strong>5. Свет и фон</strong> — тип света, цвет фона, требования площадки</li>
+<li><strong>6. Формат</strong> — соотношение сторон, доля кадра, для какой площадки</li>
+</ol>
+<div class="card alert">
+<strong>Не пересказывайте паспорт целиком.</strong> В промпт идут только визуальные признаки. То, что не видно на фотографии — артикул, состав в процентах, размерный ряд — влияет на картинку только косвенно, через фактуру и пропорции. «Хлопок 80%» модель прочитает как «мягкая матовая ткань». «ТН-204» модель не прочитает вообще.
+</div>
+</section>
+
+<section>
+<h2>4. Один паспорт — три варианта картинки</h2>
+<p class="lead">Из одних и тех же данных получаются разные кадры. Меняйте один элемент формулы — получите другой снимок.</p>
+<div class="tblwrap"><table>
+<thead><tr><th>Кадр</th><th>Что меняем</th><th>Для чего</th></tr></thead>
+<tbody>
+<tr class="pick"><td class="mname">Белый фон, сверху</td><td>Фон и ракурс</td><td>Главное фото карточки. Требования большинства площадок</td></tr>
+<tr><td class="mname">Повседневный фон</td><td>Фон</td><td>Вторичное фото для карточки — показывает изделие в жизни</td></tr>
+<tr class="pick"><td class="mname">Крупный план фактуры</td><td>Ракурс</td><td>Показывает состав и вязку — отвечает на вопросы покупателя</td></tr>
+<tr><td class="mname">Все цвета в ряд</td><td>Состав кадра</td><td>Показывает цветовую линейку одним изображением</td></tr>
+<tr><td class="mname">В упаковке</td><td>Элемент кадра</td><td>Если карточка требует фото комплекта с упаковкой</td></tr>
+</tbody></table></div>
+<div class="card good">
+<strong>Как получить тот же товар в другом цвете.</strong> Сгенерируйте базовый вариант в тёмно-синем. Затем возьмите его как референс и напишите: «Перекраси основной цвет из тёмно-синего в терракотовый. Сохрани без изменений фактуру, вязку, форму, вышивку и освещение». Через референсы изделие останется тем же изделием, а не станет похожим.
+</div>
+</section>
+
+<section>
+<h2>5. Что делать, если результат не тот</h2>
+<div class="tblwrap"><table>
+<thead><tr><th>Симптом</th><th>Причина</th><th>Что дописать в промпт</th></tr></thead>
+<tbody>
+<tr><td>Ткань выглядит пластиковой</td><td>Не указан тип переплетения</td><td>«Вязка волокнистая, матовая, с видимой структурой нити»</td></tr>
+<tr><td>Вышивка «поехала» или пропала</td><td>Деталь названа слишком общо</td><td>«Вышивка ровная, читаемая, цветом по маке-бренду» или убрать маской и наложить вручную</td></tr>
+<tr><td>Цвет не совпадает с образцом</td><td>Названо обобщённо</td><td>«Тёмно-синий, не яркий, не чёрный»</td></tr>
+<tr><td>Появились лишние предметы</td><td>Не задан запрет</td><td>«Только изделие, без посторонних объектов, без текста»</td></tr>
+<tr><td>Пропорции не те</td><td>Не указана высота или крой</td><td>«Высота голенища 18 см, ширина 9 см, пропорции квадратные»</td></tr>
+<tr><td>Фото красивое, но не для карточки</td><td>Не указан формат</td><td>«Квадрат 1:1, изделие занимает 80% кадра, ровный белый фон»</td></tr>
+</tbody></table></div>
+</section>
+
+<section>
+<h2>6. Чек-лист перед отправкой в промпт</h2>
+<div class="card">
+<ul class="check">
+<li>Название указано без бренда и превосходных степеней</li>
+<li>Написан материал и фактура переплетения</li>
+<li>Цвет назван точно, а не одним общим словом</li>
+<li>Указана конструкция: высота, крой, число пар в кадре</li>
+<li>Перечислены детали бренда — вышивка, логотип, фурнитура</li>
+<li>Описан сценарий: как изделие уложено в кадре</li>
+<li>Указан тип света без жёстких теней</li>
+<li>Задан формат и доля изделия в кадре</li>
+<li>Есть запрет на посторонние объекты и текст</li>
+<li>Артикул и размерный ряд в промпт не попали</li>
+</ul>
+</div>
+</section>
+
+<section>
+<div class="card alert">
+<strong>О проверке результата.</strong> Модель всегда что-то додумывает. Перед тем как отдавать картинку в работу, сверьте результат с паспортом по пунктам: состав виден по фактуре, цвет совпадает, вышивка на месте, пропорции правильные. Если расходится — это не ошибка промпта, а повод для точечной правки через референс.
+</div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+Раздаточный материал №4 к занятию 2 «Визуал + видео для бренда» · 23 октября 2026<br>
+Модели для генерации и цены — в <a href="https://mrvolkomorov.github.io/evgenia-models-guide/" target="_blank">раздатке №1</a>, техники правки — в <a href="https://mrvolkomorov.github.io/evgenia-editing-guide/" target="_blank">раздатке №2</a>
+</div></footer>
+</body></html>
